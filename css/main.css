@@ -981,6 +981,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
         background: #313131;
         padding: .6rem .6rem;
         border-radius: 3px;
+        display: none;
 }
 .skill-bars li .progress span::after {
         position: absolute;
