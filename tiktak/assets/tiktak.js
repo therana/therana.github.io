@@ -16,13 +16,8 @@
      const minsDegrees = ((mins / 60) * 360) + ((seconds / 60) * 6) + 90;
      minsHand.style.transform = `rotate(${minsDegrees}deg)`;
 
-     if (secondsDegrees % 90 == 0) {
+     if (secondsDegrees == 90) {
          minAudio.play();
-     }
-     if (secondsDegrees % 30 == 0) {
-         document.getElementById('second-hand').classList.add('color');
-         console.log(secondsDegrees);
-
      }
 
 
@@ -30,7 +25,7 @@
      const hourDegrees = ((hour / 12) * 360) + ((mins / 60) * 30) + 90;
      hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
-     if (hourDegrees % 30 == 0 && secondsDegrees < 91) {
+     if (hourDegrees % 30 == 0 && secondsDegrees == 90) {
          hourAudio.play();
      }
 
