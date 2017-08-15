@@ -1,3 +1,4 @@
+
 /**
  * =================================================================== 
  *
@@ -959,7 +960,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
         top: -3rem;
         font-family: "poppins-bold", sans-serif;
         color: #313131;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         letter-spacing: .2rem;
         font-size: 1.5rem;
         line-height: 2.4rem;
