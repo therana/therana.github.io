@@ -1,7 +1,12 @@
     html {
       background:white url(http://unsplash.it/1500/1000?image=40&blur=50);
-      background-size:cover;
       background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
       font-family:'helvetica neue';
       text-align: center;
       font-size: 10px;
