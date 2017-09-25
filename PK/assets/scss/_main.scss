@@ -1,0 +1,216 @@
+
+/* --------------------------------
+
+Main StyleSheet
+
+-------------------------------- */
+body{
+
+}
+
+a{
+	color: $link-color;
+}
+
+/*!---------- Selection-Color ----------*/
+::selection {
+  background: $link-color;
+  color: white;
+}
+::-moz-selection {
+  background: $link-color;
+  color: white;
+}
+
+.fix-top-bottom{
+	width: 100%;
+    background: #093250;
+    padding: 30px 0;
+    text-align: center;
+    p{
+        color: white;
+    }
+}
+
+#top-fixed{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#bottom-fixed{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    ul{
+        padding-bottom: 10px;
+        li > a i.fa{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid;
+            border-radius: 50px;
+            &:hover{
+                color: white;
+                border-color: $link-color;
+                background: $link-color;
+                transition: all ease-in-out 0.3s;
+            }
+        }
+     }
+}
+#inner-sections{
+    text-align: center;
+    padding: 50px 0;
+    h2,h3,h4{
+        color: #093250;
+        font-weight: 200;
+        font-family: inherit;
+        letter-spacing: 1px;
+    }
+    .right-text{
+        padding-top: 20px;
+    }
+    ul.list-inline{
+        li>a{
+            // background: $link-color;
+            background-color: $link-color;
+            color: white;
+            padding: 20px 40px;
+            display: block;
+            margin: 30px 0;
+            width: 150px;
+            font-size: 21px;
+            border-radius: 3px;
+            i.fa{
+                display: none;
+            }
+            &.green-btn{
+                background: #5cb85c;
+            }
+            &:hover{
+                text-decoration: none;
+                background: $primary-color;
+                transition: all ease-in-out .3s;
+                i.fa{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    #bottom-container{
+        // background: #f9f9f9;
+        .left-text{
+            padding-top: 192px;
+        }
+    }
+}
+
+#map {
+  width: 100%;
+  height: 350px;
+}
+
+/* scroll to top */
+.scrollup{
+    position:fixed;
+    width:32px;
+    height:32px;
+    bottom:0px;
+    right:20px;
+    background: $link-color;
+-webkit-border-radius: 2px 2px 0 0;
+    -moz-border-radius: 2px 2px 0 0;
+    border-radius:  2px 2px 0 0;
+}
+
+a.scrollup {
+    outline:0;
+    text-align: center;
+}
+
+a.scrollup:hover,a.scrollup:active,a.scrollup:focus {
+    opacity:1;
+    text-decoration:none;
+}
+a.scrollup i {
+    margin-top: 10px;
+    color: #fff;
+}
+a.scrollup i:hover {
+    text-decoration:none;
+}
+.modal .panel-heading{
+    background: $primary-color !important;
+    border: none;
+    margin-bottom: 20px;
+}
+.modal .panel-title{
+    line-height: 2;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.modal .panel input, .modal .panel button.close-btn{
+    border-radius: 5px !important;
+    padding: 20px 30px;
+    box-shadow: 0 0 3px 0 #999;
+    border: none;
+}
+.modal .panel button.close-btn:hover{
+    outline: none;
+    background: #F7B800;
+    color: white;
+}
+.modal .panel-footer{
+    border-top: none;
+    background: white;
+    .btn-success{
+        padding: 15px 50px;
+        border-radius: 0px;
+        background: $link-color;
+        &:hover{
+        background: $primary-color;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}
+.modal .panel{
+    border: none;
+    .close{
+        opacity: .75;
+        color: white;
+        &:hover{
+            opacity: 1;
+            color: white;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}
+.panel textarea.form-control{
+    padding: 20px 30px;
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+        margin: 30px auto;
+        top: 50%;
+        margin-top: -175px;
+        border-radius: 5px;
+    }
+    .post-img img{
+        padding-top: 30px;
+    }
+    .left-text{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .left-text{
+        padding: 20px 0 !important;
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "gulp-starter",
+  "version": "1.0.0",
+  "description": "Starter Package with Gulp,SCSS,Bootstrap,Font-Awesome etc",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-concat": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thereana/gulp-starter"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-jshint": "^2.0.4",
+    "gulp-live-server": "0.0.30",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "install": "^0.8.7",
+    "jshint": "^2.9.4",
+    "npm": "^4.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

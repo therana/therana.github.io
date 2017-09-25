@@ -1,0 +1,61 @@
+/* --------------------------------
+
+It's about fonts
+
+-------------------------------- */
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+$primary-font          :    "Helvetica Neue";
+$seconday-font         :    sans-serif;
+$general-fonts         :    "Helvetica Neue",Helvetica,Arial,sans-serif;
+$heading-font          :    $primary-font;
+$headings-font-family  :    $primary-font;
+$headings-font-weight  :    bold;
+$headings-line-height  :    1.5;
+$primary-font-size     :    14px;
+$font-size-h1          :    46px;
+$font-size-h2          :    36px;
+$font-size-h3          :    28px;
+$font-size-h4          :    22px;
+$font-size-h5          :    18px;
+$font-size-h6          :    16px;
+
+body{
+	font-family: $primary-font,$seconday-font;  // Use for Google Fonts
+	// font-family: $general-fonts;				// Use for Genaral Fonts
+	font-size: $primary-font-size;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p{
+	font-size: $primary-font-size;
+}
+
+/*!---------- Inherited From Bootstrap SCSS ----------*/
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  		color: $headings-color;
+}
+h1, .h1 {
+ font-size: $font-size-h1;
+}
+h2, .h2 {
+ font-size: $font-size-h2;
+}
+h3, .h3 {
+ font-size: $font-size-h3;
+}
+h4, .h4 {
+ font-size: $font-size-h4;
+}
+h5, .h5 {
+ font-size: $font-size-h5;
+}
+h6, .h6 {
+ font-size: $font-size-h6;
+}

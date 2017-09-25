@@ -1,0 +1,19 @@
+
+/* -------------------------------- 
+
+Primary Styles
+
+-------------------------------- */
+
+
+@import "font-awesome";
+@import "bootstrap";
+@import "reset";
+@import "mixins";
+@import "variables";
+@import "typography";
+@import "main";
+@import "responsive";
+@import "override";
+
+$icon-font-path : '../fonts';

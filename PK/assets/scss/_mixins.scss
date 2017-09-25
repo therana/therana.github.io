@@ -1,0 +1,22 @@
+
+/* -------------------------------- 
+
+Mixins goes here
+
+-------------------------------- */
+@mixin round($radius: 10px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+/*!---------- fix any background image ----------*/
+@mixin fixed-bg($url){
+	background-image: $url;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover;
+}
