@@ -8398,6 +8398,9 @@ h6, .h6 {
 Main StyleSheet
 
 -------------------------------- */
+body {
+  background: white; }
+
 a {
   color: #f4645f; }
 
