@@ -167,8 +167,9 @@ a.scrollup i:hover {
     background: white;
     .btn-success{
         padding: 15px 50px;
-        border-radius: 0px;
+        border-radius: 5px;
         background: $link-color;
+        border: none;
         &:hover{
         background: $primary-color;
         }
@@ -193,12 +194,13 @@ a.scrollup i:hover {
 }
 .panel textarea.form-control{
     padding: 20px 30px;
+    margin-bottom: 20px;
 }
 @media (min-width: 768px) {
     .modal-dialog {
         margin: 30px auto;
         top: 50%;
-        margin-top: -175px;
+        margin-top: -300px;
         border-radius: 5px;
     }
     .post-img img{
@@ -213,4 +215,139 @@ a.scrollup i:hover {
     .left-text{
         padding: 20px 0 !important;
     }
+}
+.modal .col-md-6{
+    margin: 10px 0;
+}
+.first-name-error, .last-name-error, .contact-email-error, .contact-subject-error, .contact-message-error {
+    color: #ffffff;
+    position: absolute;
+    background: $link-color;
+    display: none;
+    left: 25px;
+    top: -30px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.first-name-error:after, .last-name-error:after, .contact-email-error:after, .contact-subject-error:after, .contact-message-error:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px;
+    border-color: $link-color transparent transparent transparent;
+    left: 25px;
+    bottom: -24px;
+}
+.custom-btn {
+    background: none;
+    color: green;
+    font-size: 40px;
+    line-height: 1;
+    margin-top: 40px;
+    &:hover,&:focus{
+        color: green;
+        transition: all ease-in-out 0.5s;
+        outline: none;
+    }
+}
+
+#contact-submit {
+    background: none;
+    color: $link-color;
+    font-size: 40px;
+    line-height: 1;
+    &:hover,&:focus{
+        color: $primary-color;
+        transition: all ease-in-out 0.5s;
+        outline: none;
+    }
+}
+#contact-loading{
+    display: none;
+    cursor: inherit;
+}
+.modal .red{
+    color: $link-color;
+    padding-bottom: 10px;
+}
+
+input {
+  border: 2px solid #ddd;
+  color: black;
+  background: #f0f2f1;
+  height: 48px;
+  margin-top: 5px;
+  padding: 12px 8px;
+  width: 70%;
+  border-radius: 5px;
+}
+.contFrm textarea {
+  margin-top: 5px;
+  padding: 12px 8px;
+  width: 70%;
+  background: #f0f2f1;
+  color: black;
+  border: 2px solid #ddd;
+  height: 115px;
+  border-radius: 5px;
+}
+.button {
+  border: 0 solid #000000;
+  border-radius: 4px;
+  box-shadow: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  background: #d5dad8;
+  transition : none
+}
+.button:hover {
+  background: #444444;
+  text-decoration: none;
+  color: #fff;
+}
+/* Custom Media Query */
+@media screen and (max-width: 768px) {
+  .contFrm .text-left,
+  .contFrm .text-right {
+    text-align: center;
+  }
+}
+#modal-form .wrapper{
+    padding: 0;
+}
+#modal-form .wrapper .content{
+    padding: 0;
+}
+#modal-form .container{
+    max-width: 100%;
+    .inner{
+        margin-left: -20px;
+    }
+}
+
+#modal-form .j-forms .primary-btn, .j-forms .secondary-btn {
+    margin: 10px auto;
+    width: auto;
+    padding: 5px 50px;
+    background: $link-color;
+    i.fa{
+        display: none;
+    }
+    &:hover {
+        transition: all ease-in-out 0.3s;
+        background: $primary-color;
+        i.fa{
+            display: inline-block;
+        }
+    }
+}
+.j-forms input:hover, .j-forms input:focus{
+    box-shadow: 0px !important;
+    border: 2px solid 2px solid rgba(48,63,159,.6);
+    transition: none !important;
+
 }

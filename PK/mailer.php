@@ -1,27 +1,33 @@
 <?php
-// Note: filter_var() requires PHP >= 5.2.0
-if ( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
+if($_REQUEST['first_name'] == '' || $_REQUEST['contact_email'] == '' ||  $_REQUEST['message'] == ''):
+  return "error";
+endif;
+if (filter_var($_REQUEST['contact_email'], FILTER_VALIDATE_EMAIL)):
+  $subject = 'Email from kite Demo Page'; // Subject of your email
 
-    // detect & prevent header injections
-    $mailTest = "/(content-type|bcc:|cc:|to:)/i";
-    foreach ( $_POST as $key => $val ) {
-        if ( preg_match( $mailTest, $val ) ) {
-            exit;
-        }
-    }
+  // Receiver email address
+  $to = 'rana2k156@gmail.com';  //Change the email address by yours
 
-    $headers = 'From: ' . $_POST["name"] . '<' . $_POST["email"] . '>' . "\r\n" .
-    'Reply-To: ' . $_POST["email"] . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
 
-    $success = mail( "rana2k156@gmail.com", $_POST['subject'], $headers );
-    //  Replace with your email
+  // prepare header
+  $header = 'From: '. $_REQUEST['first_name'] . " " .$_REQUEST['last_name'] . ' <'. $_REQUEST['contact_email'] .'>'. "\r\n";
+  $header .= 'Reply-To:  '. $_REQUEST['first_name'] . " " .$_REQUEST['last_name'] . ' <'. $_REQUEST['contact_email'] .'>'. "\r\n";
+  // $header .= 'Cc:  ' . 'example@domain.com' . "\r\n";
+  // $header .= 'Bcc:  ' . 'example@domain.com' . "\r\n";
+  $header .= 'X-Mailer: PHP/' . phpversion();
 
-    if ($success) {
-        ?>
-        <div style="color:#3c763d;padding:30px;text-align:center">
-            <strong>Success!</strong> Message has been sent successfully.
-        </div>
-        <?php
-    }
-}
+
+  $message .= 'Name: ' . $_REQUEST['first_name'] . " " .$_REQUEST['last_name'] . "\n";
+  $message .= 'Email: ' . $_REQUEST['contact_email'] . "\n";
+  $message .= 'Subject: ' . $_REQUEST['contact_subject'] . "\n";
+  $message .= 'Message: '. $_REQUEST['message'];
+
+  // Send contact information
+  $mail = mail( $to, $subject , $message, $header );
+
+  echo 'sent';
+  else:
+    return "error";
+  endif;
+
+?>

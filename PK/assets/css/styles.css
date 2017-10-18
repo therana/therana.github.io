@@ -8538,8 +8538,9 @@ a.scrollup i:hover {
   background: white; }
   .modal .panel-footer .btn-success {
     padding: 15px 50px;
-    border-radius: 0px;
-    background: #f4645f; }
+    border-radius: 5px;
+    background: #f4645f;
+    border: none; }
     .modal .panel-footer .btn-success:hover {
       background: #093250; }
     .modal .panel-footer .btn-success:focus {
@@ -8557,13 +8558,14 @@ a.scrollup i:hover {
       outline: none; }
 
 .panel textarea.form-control {
-  padding: 20px 30px; }
+  padding: 20px 30px;
+  margin-bottom: 20px; }
 
 @media (min-width: 768px) {
   .modal-dialog {
     margin: 30px auto;
     top: 50%;
-    margin-top: -175px;
+    margin-top: -300px;
     border-radius: 5px; }
   .post-img img {
     padding-top: 30px; }
@@ -8574,6 +8576,139 @@ a.scrollup i:hover {
 @media (max-width: 767px) {
   .left-text {
     padding: 20px 0 !important; } }
+
+.modal .col-md-6 {
+  margin: 10px 0; }
+
+.first-name-error, .last-name-error, .contact-email-error, .contact-subject-error, .contact-message-error {
+  color: #ffffff;
+  position: absolute;
+  background: #f4645f;
+  display: none;
+  left: 25px;
+  top: -30px;
+  padding: 5px 10px;
+  border-radius: 3px; }
+
+.first-name-error:after, .last-name-error:after, .contact-email-error:after, .contact-subject-error:after, .contact-message-error:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px;
+  border-color: #f4645f transparent transparent transparent;
+  left: 25px;
+  bottom: -24px; }
+
+.custom-btn {
+  background: none;
+  color: green;
+  font-size: 40px;
+  line-height: 1;
+  margin-top: 40px; }
+  .custom-btn:hover, .custom-btn:focus {
+    color: green;
+    -moz-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+    outline: none; }
+
+#contact-submit {
+  background: none;
+  color: #f4645f;
+  font-size: 40px;
+  line-height: 1; }
+  #contact-submit:hover, #contact-submit:focus {
+    color: #093250;
+    -moz-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+    outline: none; }
+
+#contact-loading {
+  display: none;
+  cursor: inherit; }
+
+.modal .red {
+  color: #f4645f;
+  padding-bottom: 10px; }
+
+input {
+  border: 2px solid #ddd;
+  color: black;
+  background: #f0f2f1;
+  height: 48px;
+  margin-top: 5px;
+  padding: 12px 8px;
+  width: 70%;
+  border-radius: 5px; }
+
+.contFrm textarea {
+  margin-top: 5px;
+  padding: 12px 8px;
+  width: 70%;
+  background: #f0f2f1;
+  color: black;
+  border: 2px solid #ddd;
+  height: 115px;
+  border-radius: 5px; }
+
+.contFrm label {
+  display: block;
+  font-weight: 400; }
+
+.button {
+  border: 0 solid #000000;
+  border-radius: 4px;
+  box-shadow: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  background: #d5dad8;
+  -moz-transition: none;
+  transition: none; }
+
+.button:hover {
+  background: #444444;
+  text-decoration: none;
+  color: #fff; }
+
+/* Custom Media Query */
+@media screen and (max-width: 768px) {
+  .contFrm .text-left,
+  .contFrm .text-right {
+    text-align: center; } }
+
+#modal-form .wrapper {
+  padding: 0; }
+
+#modal-form .wrapper .content {
+  padding: 0; }
+
+#modal-form .container {
+  max-width: 100%; }
+  #modal-form .container .inner {
+    margin-left: -20px; }
+
+#modal-form .j-forms .primary-btn, .j-forms .secondary-btn {
+  margin: 10px auto;
+  width: auto;
+  padding: 5px 50px;
+  background: #f4645f; }
+  #modal-form .j-forms .primary-btn i.fa, .j-forms .secondary-btn i.fa {
+    display: none; }
+  #modal-form .j-forms .primary-btn:hover, .j-forms .secondary-btn:hover {
+    -moz-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    background: #093250; }
+    #modal-form .j-forms .primary-btn:hover i.fa, .j-forms .secondary-btn:hover i.fa {
+      display: inline-block; }
+
+.j-forms input:hover, .j-forms input:focus {
+  box-shadow: 0px !important;
+  border: 2px solid 2px solid rgba(48, 63, 159, 0.6);
+  -moz-transition: none !important;
+  transition: none !important; }
 
 /* -------------------------------- 
 
