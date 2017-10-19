@@ -100,7 +100,7 @@
 }
 
 .pricing--palden .pricing__deco {
-	border-radius: 10px 10px 0 0;
+	border-radius: 4px;
 	background: #80C41C;
 	padding: 4em 0 9em;
 	position: relative;
@@ -111,7 +111,7 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 160px;
+	height: 140px;
 }
 
 .pricing--palden .pricing__item--featured .pricing__deco {
@@ -119,11 +119,11 @@
 }
 
 .pricing--palden .pricing__title {
-	font-size: 0.75em;
+	font-size: 1em;
 	margin: 0;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	color: #ffd5bd;
+	color: #e8913c;
 }
 
 .pricing--palden .deco-layer {
@@ -155,7 +155,7 @@
 }
 
 .pricing--palden .pricing__currency {
-	font-size: 0.15em;
+	font-size: 0.25em;
 	vertical-align: top;
 	color: rgba(0,0,0,0.4);
 }
@@ -195,8 +195,8 @@
 	margin: auto 3em 2em 3em;
 	padding: 1em 2em;
 	color: #fff;
-	border-radius: 30px;
-	background: #4E4E4E;
+	border-radius: 4px;
+	background:  #e8913c;
 	-webkit-transition: background-color 0.3s;
 	transition: background-color 0.3s;
 	font-size: 15px;
