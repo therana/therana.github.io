@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700');
-
+body{
+	background: white;
+}
 * {
     margin: 0;
     padding: 0;
