@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700,900');
 body{
 	background: white;
 }
@@ -113,7 +113,7 @@ body{
 .pricing--palden .pricing__deco {
 	border-radius: 4px;
 	background: #EB6C23;
-	padding: 4em 0 9em;
+	padding: 4em 0 7em;
 	position: relative;
 }
 
@@ -122,11 +122,12 @@ body{
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 140px;
+	height: 130px;
+    margin-bottom: -10px;
 }
 
 .pricing--palden .pricing__item--featured .pricing__deco {
-	padding: 5em 0 8.885em 0;
+	padding: 5em 0 7em 0;
 }
 
 .pricing--palden .pricing__desk {
@@ -172,7 +173,7 @@ body{
 
 .pricing--palden .pricing__price {
 	font-size: 5em;
-	font-weight: bold;
+	font-weight: 900;
 	padding: 0;
 	color: #fff;
 	margin: 0 0 0.25em 0em;
@@ -221,7 +222,7 @@ body{
 	color: #666;
 }
 .pricing--palden .pricing__feature i.fa-check-circle-o,ul.pt__accordion ul li i.fa{
-	color: #999;
+	color: #0a4fbe;
     margin-right: 3px;
     font-size: 18px;
     line-height: 1;
@@ -258,7 +259,7 @@ body{
 
 .pricing--palden .pricing__action:hover,
 .pricing--palden .pricing__action:focus {
-	background-color: #333;
+	background-color: #0a4fbe;
 	transition: background-color cubic-bezier(0.65, 0.05, 0.36, 1) .5s;
 }
 
@@ -458,4 +459,65 @@ ul.pt__accordion li input[type=checkbox]:checked ~ i:after {
     display: block;
     -webkit-transition: .5s -webkit-transform ease-out 0s;
     transition: .5s transform ease-out 0s
+}
+
+.ribbon-wrapper-green {
+    width: 123px;
+    height: 125px;
+    overflow: hidden;
+    position: absolute;
+
+    top: -4px;
+    right: 5px;
+}
+.pricing__item--featured .ribbon-wrapper-green{
+    right: -4px;
+}
+.ribbon-wrapper-green-last{
+    right: -4px;
+}
+.textShadow {
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.ribbon-green {
+    font: 15px inherit;
+    text-transform: uppercase;
+    color: #333;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    position: relative;
+    padding: 8px 0;
+    left: 0px;
+    top: 25px;
+    width: 157px;
+    background-color: #0a4fbe;
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+.ribbon-green:before {
+    left: 0;
+}
+
+.ribbon-green:before, .ribbon-green:after {
+    content: "";
+    border-top: 3px solid #0a4fbe;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    position: absolute;
+    bottom: -3px;
+}
+.ribbon-green:after {
+    right: 0;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
