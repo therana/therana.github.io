@@ -522,3 +522,7 @@ ul.pt__accordion li input[type=checkbox]:checked ~ i:after {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+.tariffs__control__tab ul li a{
+  text-decoration: none;
+  color: inherit;
+}
