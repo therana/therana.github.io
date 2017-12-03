@@ -158,8 +158,6 @@
         text-align: center;
         top: 150px;
         bottom: 10px;
-        /*background: #fff;*/
-        /*background: rgba(255,255,255,0.9);*/
         padding: 5px 0;
     }
     .ei-title h2, .ei-title h3, .ei-title p{
@@ -192,6 +190,6 @@
         max-width: 300px !important;
     }
     header.navbar-fixed-top {
-    padding: 25px 0px;
+    padding: 25px;
     }
 }
