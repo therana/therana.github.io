@@ -182,9 +182,6 @@
     header nav li {
     margin: 0 5px;
     }
-    header.navbar-fixed-top {
-    padding: 25px 0px;
-    }
     header nav li {
      display: inline-block;
     }
@@ -193,5 +190,8 @@
 @media screen and (max-width: 767px){
     .ei-slider-thumbs{
         max-width: 300px !important;
+    }
+    header.navbar-fixed-top {
+    padding: 25px 0px;
     }
 }
