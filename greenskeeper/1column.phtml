@@ -1,0 +1,328 @@
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
+
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<?php $bodyClasses = $this->getBodyClass() .' '. $this->helper('ultimo')->getThemeBodyClasses(); ?>
+<body class="<?php echo $bodyClasses; ?>">
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div id="root-wrapper">
+<div class="wrapper">
+    <?php echo $this->getChildHtml('global_notices') ?>
+    <div class="page">
+
+    <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+
+        html {
+            font-family: Roboto, sans-serif;
+        }
+
+        .footer {
+            text-align: center;
+            font-weight: 500;
+            font-size: 16px;
+            height: 100px;
+            padding-top: 40px;
+        }
+
+        .blog {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .blog h1 {
+            font-weight: 700;
+        }
+
+        #mc_embed_signup {
+            background: #fff;
+            font: 14px Roboto, sans-serif;
+            position: absolute;
+            float: none;
+            height: 70%;
+            width: 40%;
+            top: 5vh;
+            left: 30%;
+            border-radius: 25px;
+            padding: 1% 0 0 0 !important;
+            box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.5);
+        }
+
+        #mc-embedded-subscribe {
+            height: 45px !important;
+            margin: 0 !important;
+            background-color: #D45500 !important;
+            color: #ffffff !important;
+            min-width: 120px;
+            text-decoration: none;
+        }
+
+        .indicates-required {
+            display: none;
+        }
+
+        img.logo {
+            margin-bottom: 10px;
+            height: 60px;
+        }
+
+        p.intro {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        #mc_embed_signup .mc-field-group{
+            margin-bottom: 5px;
+            min-height: 0;
+        }
+
+        .row {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        @media screen and (min-width: 481px) {
+            .blog-grid .col-md-3 {
+                margin-left: 6%;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
+                border-radius: 10px;
+                padding: 0;
+            }
+        }
+
+        .col-md-3 > a,
+        .col-md-3 > a:hover,
+        .col-md-3 > a:visited,
+        .col-md-3 > a:active {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .product__textwrap {
+            padding: 15px 40px;
+        }
+
+        .product__imgwrap img {
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+        }
+
+        form {
+            position: absolute;
+        }
+
+        #mc_embed_signup_scroll {
+            width: 74%;
+            text-align: center;
+            position: absolute;
+        }
+
+        #mc_embed_signup_scroll label {
+            display: none !important;
+        }
+
+        #mc_embed_signup_scroll h2 {
+            text-transform: uppercase;
+            font-weight: 700;
+            display: none;
+        }
+
+        #mc-embedded-subscribe-form {
+            padding: 20px 0 20px 13% !important;
+        }
+
+        #mc_embed_signup .mc-field-group {
+            width: 100% !important;
+        }
+
+        .background {
+            height: 100vh;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+
+
+        @media screen and (max-width: 480px) {
+            #mc_embed_signup_scroll h2 {
+                display: none;
+            }
+            #mc_embed_signup {
+                background: #fff;
+                font: 14px Roboto, sans-serif;
+                position: absolute;
+                float: none;
+                height: 84%;
+                width: 90%;
+                top: 7vh;
+                left: 5%;
+                border-radius: 25px;
+                padding: 1% 0 0 0 !important;
+                box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.5);
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            .blog-grid .col-md-3 {
+                margin-bottom: 30px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
+                border-radius: 10px;
+                padding: 0;
+            }
+        }
+
+        #header-container, .footer-container {
+            display: none !important;
+        }
+
+        .go-to-blog {
+            cursor: pointer;
+        }
+
+        .chevron::before {
+            border-style: solid;
+            border-width: 0.15em 0.15em 0 0;
+            content: '';
+            display: inline-block;
+            height: 0.65em;
+            left: 0.15em;
+            position: relative;
+            top: 0.15em;
+            transform: rotate(-45deg);
+            vertical-align: top;
+            width: 0.65em;
+        }
+
+        .chevron.bottom:before {
+            top: 0;
+            transform: rotate(135deg);
+            font-size: 45px;
+        }
+
+        .chevron {
+            position: absolute;
+            top: 85%;
+            left: 48%;
+            cursor: pointer;
+        }
+
+    </style>
+
+        <?php echo $this->getChildHtml('header') ?>
+        <div class="main-container col1-layout">
+            <div class="main-top-container"><?php echo $this->getChildHtml('main_before_top') ?></div>
+            <div class="main container full-width no-side-padding">
+                <div class="inner-container">
+                    <div class="container"><div class="inner-container"><?php echo $this->getChildHtml('breadcrumbs') ?></div></div>
+                    <div class="preface"><?php echo $this->getChildHtml('preface') ?></div>
+                    <div id="page-columns" class="columns">
+                        <div class="column-main">
+                            <?php echo $this->getChildHtml('global_messages') ?>
+                            <?php echo $this->getChildHtml('content') ?>
+                        </div>
+                    </div>
+                    <div class="postscript"><?php echo $this->getChildHtml('postscript') ?></div>
+                </div>
+            </div>
+            <div class="main-bottom-container"><?php echo $this->getChildHtml('main_bottom') ?></div>
+        </div>
+
+
+
+
+
+    <!-- Begin MailChimp Signup Form -->
+    <div class="row header">
+        <div class="col-md-12 background" style="background-image: url(http://igneoustheory.com/media/wysiwyg/kaleidoscope.jpg)">
+
+        </div>
+        <a id="gotoblog">
+            <span class="chevron bottom"></span>
+        </a>
+    </div>
+    <div id="mc_embed_signup">
+        <form action="https://igneoustheory.us17.list-manage.com/subscribe/post?u=197c56d4a9a9c182f94e3afca&amp;id=3b27c7e2d0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+                <img class="logo" src="<?php echo $this->getSkinUrl(Mage::getStoreConfig('design/header/logo_src'));?>" />
+                <h2>Subscribe to our mailing list</h2>
+                <p class="intro">
+                Igneous Theory brings Nature, Science and Art together through sterling silver jewelry, fossils, minerals and decor. Soon, you'll be able to shop right online and in our San Francisco store. Please Subscribe!
+                </p>
+                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+                </div>
+                <div class="mc-field-group">
+                    <label for="mce-FNAME">First Name </label>
+                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="Firstname">
+                </div>
+                <div class="mc-field-group">
+                    <label for="mce-LNAME">Last Name </label>
+                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME" placeholder="Lastname">
+                </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_197c56d4a9a9c182f94e3afca_3b27c7e2d0" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+    </div>
+    <!--End mc_embed_signup-->
+
+    <div class="row blog" id="blog">
+        <div class="col-md-12">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h1 class="go-to-blog">Follow The Launch on Our Blog</h1>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+
+
+
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+    </div>
+</div>
+</div> <!-- end: root-wrapper -->
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+<script>
+    jQuery("#gotoblog").click(function(e) {
+        e.preventDefault();
+        jQuery('html, body').animate({
+            scrollTop: jQuery("#blog").offset().top
+        }, 1000);
+    });
+
+    jQuery(".go-to-blog").click(function(e) {
+        e.preventDefault();
+        jQuery('html, body').animate({
+            scrollTop: jQuery("#blog").offset().top
+        }, 1000);
+    });
+</script>
+</html>
